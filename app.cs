@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApplication1
 {
-    class Program
+    class Program //boilerplate
     {
         static void Main(string[] args)
         {
