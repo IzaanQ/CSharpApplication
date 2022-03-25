@@ -17,13 +17,13 @@ namespace ConsoleApplication1
             Console.WriteLine("Let's test your math skills!");
             Console.WriteLine("You are required to add a random integer to a random number and see how far you get!");
             Console.WriteLine("The randmon number is " + Ran + ", and the interger you must add by is " + Ran1 + ".");
-            while
+            while (1==1)
             {
                int stageAnswer = Ran + Ran1;
                int userAnswer = Convert.ToInt32(Console.ReadLine());
-               if ((userAnswer > stageAnswer || (userAnswer < stageAnswer))
+               if ((userAnswer > stageAnswer) || (userAnswer < stageAnswer))
                {
-                   Break; 
+                   break; 
                }
                else 
                {
@@ -31,7 +31,7 @@ namespace ConsoleApplication1
                }
                do
                {
-               stageanswer 
+               stageAnswer 
                }
             }
         }
