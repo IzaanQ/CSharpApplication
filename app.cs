@@ -36,6 +36,7 @@ namespace ConsoleApplication1
                stageAnswer = stageAnswer + Ran1; 
                }
                while (1==2);
+               Console.ReadLine(); 
             }
         }
     }
