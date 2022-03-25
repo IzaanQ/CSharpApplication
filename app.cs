@@ -27,7 +27,8 @@ namespace ConsoleApplication1
                }
                else 
                {
-                   score++; 
+                   score++;
+                   Console.WriteLine(score);
                }
                do
                {
