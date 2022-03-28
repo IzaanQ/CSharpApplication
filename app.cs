@@ -20,28 +20,29 @@ namespace ConsoleApplication1
             while (1 == 1) // while (true)
             {
                 int userAnswer = Convert.ToInt32(Console.ReadLine()); //Analyse answer and convert to integer
-                if (userAnswer == stageAnswer)// If (correct answer (true))
+                if (userAnswer == stageAnswer) // If (correct answer (true))
                 {
-                    score = score + 1; //Increment score
-                    Console.WriteLine("The current value is " + stageAnswer); //Fourth output text line (display current numerical value)
-                    Console.WriteLine("Add " + Ran1 + " to " + stageAnswer); //Fifth output text line (instructions3)
-                    Console.WriteLine("Your current score is: " + score + ". Input your next answer, then press 'Enter'."); //Sixth output text line (CurrScore + Instructions4)
-                    Console.WriteLine(); //Add blank line to make the program look nicer
-                    do
+                    do // Do this at least once
                     {
-                        stageAnswer = stageAnswer + Ran1; //Update correct score value
+                        score = score + 1; //Increment score
+                        Console.WriteLine("The current value is " + stageAnswer); //Fourth output text line (display current numerical value)
+                        Console.WriteLine("Add " + Ran1 + " to " + stageAnswer); //Fifth output text line (instructions3)
+                        Console.WriteLine("Your current score is: " + score + ". Input your next answer, then press 'Enter'."); //Sixth output text line (CurrScore + Instructions4)
+                        Console.WriteLine(); //Add blank line to make the program look nicer
+                        stageAnswer = stageAnswer + Ran1; //Update correnct integer value
                     }
-                    while (1 == 2); //While false (to run 'do' line)
+                    while (userAnswer == stageAnswer); // while (condition remains true)
                 }
-                else //If wrong answer
+
+                else //if (condition becomes false)
                 {
-                    Console.WriteLine("Sorry, that's wrong. Thanks for playing!"); //Seventh output (game over)
-                    Console.WriteLine("Your final score was: " + score); //Eighth output (final score)
+                    Console.WriteLine("Sorry, that's wrong. Thanks for playing"); //Seventh output (farewell)
+                    Console.WriteLine("Your final score is " + score); //Final score declaration
                     break; //Break out
                 }
-                
+
             }
-            Console.ReadLine(); //Run everything
+            Console.ReadLine(); //Analyse everything
         }
     }
 }
