@@ -13,7 +13,7 @@ namespace ConsoleApplication1
             int Ran = rnd.Next(1, 100); //Genereate first random integer
             int Ran1 = rnd.Next(1, 100); //Generate second random integer
             int score = 0; //Initialise score count
-            int stageAnswer = Ran + Ran1; //Declare stage answe
+            int stageAnswer = Ran + Ran1; //Declare stage answer
             Console.WriteLine("Let's test your math skills!"); //First output text line (welcoming)
             Console.WriteLine("You are required to add a random integer to a random number and see how far you get!"); //Second output text line (instructions)
             Console.WriteLine("The randmon number is " + Ran + ", and the interger you must add each time is " + Ran1 + "."); //Third output text line (instructions2)
