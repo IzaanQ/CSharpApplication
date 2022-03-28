@@ -10,38 +10,29 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int Ran = rnd.Next(1, 100); //Genereate first random integer
-            int Ran1 = rnd.Next(1, 100); //Generate second random integer
-            int score = 0; //Initialise score count
-            int stageAnswer = Ran + Ran1; //Declare stage answe
-            Console.WriteLine("Let's test your math skills!"); //First output text line (welcoming)
-            Console.WriteLine("You are required to add a random integer to a random number and see how far you get!"); //Second output text line (instructions)
-            Console.WriteLine("The randmon number is " + Ran + ", and the interger you must add each time is " + Ran1 + "."); //Third output text line (instructions2)
-            while (1 == 1) // while (true)
+            int Ran = rnd.Next(1, 100);
+            int Ran1 = rnd.Next(1, 100);
+            int score = 0;
+            int stageAnswer = Ran + Ran1;
+            Console.WriteLine("Let's test your math skills!");
+            Console.WriteLine("You are required to add a random integer to a random number and see how far you get!");
+            Console.WriteLine("The randmon number is " + Ran + ", and the interger you must add each time is " + Ran1 + ".");
+            while (1 == 1)
             {
-                int userAnswer = Convert.ToInt32(Console.ReadLine()); //Analyse answer and convert to integer
-                if (userAnswer == stageAnswer)// If (correct answer (true))
-                {
-                    score = score + 1; //Increment score
-                    Console.WriteLine("The current value is " + stageAnswer); //Fourth output text line (display current numerical value)
-                    Console.WriteLine("Add " + Ran1 + " to " + stageAnswer); //Fifth output text line (instructions3)
-                    Console.WriteLine("Your current score is: " + score + ". Input your next answer, then press 'Enter'."); //Sixth output text line (CurrScore + Instructions4)
-                    Console.WriteLine(); //Add blank line to make the program look nicer
+                int userAnswer = Convert.ToInt32(Console.ReadLine());
                     do
                     {
-                        stageAnswer = stageAnswer + Ran1; //Update correct score value
+                        score = score + 1;
+                        Console.WriteLine("Your current score is " + score + ". Press 'Enter' and then type your next answer");
+                        stageAnswer = stageAnswer + Ran1;
                     }
-                    while (1 == 2); //While false (to run 'do' line)
-                }
-                else //If wrong answer
-                {
-                    Console.WriteLine("Sorry, that's wrong. Thanks for playing!"); //Seventh output (game over)
-                    Console.WriteLine("Your final score was: " + score); //Eighth output (final score)
-                    break; //Break out
-                }
-                
+                    while (userAnswer == stageAnswer);
+                    Console.WriteLine("Sorry, that's wrong. Thanks for playing");
+                    Console.WriteLine("Your final score is " + score);
+                    break;
+
             }
-            Console.ReadLine(); //Run everything
+            Console.ReadLine();
         }
     }
 }
