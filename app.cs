@@ -11,8 +11,7 @@ namespace ConsoleApplication1
         {
             Random rnd = new Random();
             int Ran = rnd.Next(1, 100);
-            Random rnd1 = new Random();
-            int Ran1 = rnd1.Next(1, 100);
+            int Ran1 = rnd.Next(1, 100);
             int score = 0;
             int stageAnswer = Ran + Ran1;
             Console.WriteLine("Let's test your math skills!");
