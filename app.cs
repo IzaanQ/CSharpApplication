@@ -20,6 +20,9 @@ namespace ConsoleApplication1
             while (1 == 1)
             {
                 int userAnswer = Convert.ToInt32(Console.ReadLine());
+
+                if (userAnswer == stageAnswer)
+                {
                     do
                     {
                         score = score + 1;
@@ -27,9 +30,14 @@ namespace ConsoleApplication1
                         stageAnswer = stageAnswer + Ran1;
                     }
                     while (userAnswer == stageAnswer);
+                }
+
+                else
+                {
                     Console.WriteLine("Sorry, that's wrong. Thanks for playing");
                     Console.WriteLine("Your final score is " + score);
                     break;
+                }
 
             }
             Console.ReadLine();
